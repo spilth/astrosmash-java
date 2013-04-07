@@ -15,7 +15,7 @@ public class VisibleActor extends Actor {
 	protected int y;
 	protected int width;
 	protected int height;
-	protected float scale = 1;
+	protected float scale = 1.0f;
 
 	public VisibleActor() {
 		image = new ImageIcon(this.getClass().getResource(getImageName())).getImage();

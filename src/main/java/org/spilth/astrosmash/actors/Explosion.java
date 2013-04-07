@@ -2,6 +2,11 @@ package org.spilth.astrosmash.actors;
 
 public class Explosion extends VisibleActor {	
 	private int lifetime = 0;
+
+	public Explosion() {
+		super();
+		scale = 2.0f;
+	}
 	
 	public String getImageName() {
     	return "explosion.png";
