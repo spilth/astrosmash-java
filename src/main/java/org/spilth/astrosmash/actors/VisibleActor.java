@@ -8,24 +8,22 @@ import javax.swing.ImageIcon;
 
 import org.spilth.astrosmash.World;
 
-
 public class VisibleActor extends Actor {
 	protected Image image;
-	protected int x;
-	protected int y;
-	protected int width;
-	protected int height;
+	protected int x = 0;
+	protected int y = 0;
 	protected float scale = 1.0f;
+	protected int imageWidth;
+	protected int imageHeight;
 
 	public VisibleActor() {
 		image = new ImageIcon(this.getClass().getResource(getImageName())).getImage();
-        width = image.getWidth(null);
-        height = image.getHeight(null);
-        x = y = 0;
+		imageWidth = image.getWidth(null);
+		imageHeight = image.getHeight(null);
 	}
-	
+
 	public void paint(World board, Graphics2D g2d) {
-	    g2d.drawImage(image, x, y, this.getWidth(), this.getHeight(), board);
+		g2d.drawImage(image, x, y, this.getWidth(), this.getHeight(), board);
 	}
 
 	public String getImageName() {
@@ -46,14 +44,14 @@ public class VisibleActor extends Actor {
 	}
 
 	public int getWidth() {
-		return (int) (width * scale);
+		return (int) (imageWidth * scale);
 	}
-	
+
 	public int getHeight() {
-		return (int) (width * scale);
+		return (int) (imageWidth * scale);
 	}
-	
+
 	public Rectangle getBounds() {
-        return new Rectangle(x, y, getWidth(), getHeight());
-    }
+		return new Rectangle(x, y, getWidth(), getHeight());
+	}
 }
