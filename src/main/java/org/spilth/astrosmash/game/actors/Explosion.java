@@ -1,4 +1,6 @@
-package org.spilth.astrosmash.actors;
+package org.spilth.astrosmash.game.actors;
+
+import org.spilth.astrosmash.engine.VisibleActor;
 
 public class Explosion extends VisibleActor {	
 	private int lifetime = 0;

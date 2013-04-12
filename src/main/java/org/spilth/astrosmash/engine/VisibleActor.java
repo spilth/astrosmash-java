@@ -1,12 +1,10 @@
-package org.spilth.astrosmash.actors;
+package org.spilth.astrosmash.engine;
 
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Rectangle;
 
 import javax.swing.ImageIcon;
-
-import org.spilth.astrosmash.World;
 
 public class VisibleActor extends Actor {
 	protected Image image;
@@ -22,8 +20,11 @@ public class VisibleActor extends Actor {
 		imageHeight = image.getHeight(null);
 	}
 
-	public void paint(World board, Graphics2D g2d) {
-		g2d.drawImage(image, x, y, this.getWidth(), this.getHeight(), board);
+	public void paint(Graphics2D g2d) {
+		g2d.drawImage(image, x, y, this.getWidth(), this.getHeight(), null);
+		
+		//g2d.setColor(Color.RED);
+		//g2d.drawRect (x, y, getWidth(), getHeight());
 	}
 
 	public String getImageName() {

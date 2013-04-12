@@ -1,4 +1,6 @@
-package org.spilth.astrosmash.actors;
+package org.spilth.astrosmash.game.actors;
+
+import org.spilth.astrosmash.engine.VisibleActor;
 
 public class Asteroid extends VisibleActor {
 	private static int SPEED = 6;

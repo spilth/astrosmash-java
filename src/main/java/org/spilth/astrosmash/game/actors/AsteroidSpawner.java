@@ -1,6 +1,8 @@
-package org.spilth.astrosmash.actors;
+package org.spilth.astrosmash.game.actors;
 
 import java.util.Random;
+
+import org.spilth.astrosmash.engine.Actor;
 
 public class AsteroidSpawner extends Actor {
 	Random generator;

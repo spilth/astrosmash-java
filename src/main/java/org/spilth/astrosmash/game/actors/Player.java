@@ -1,6 +1,8 @@
-package org.spilth.astrosmash.actors;
+package org.spilth.astrosmash.game.actors;
 
 import java.awt.event.KeyEvent;
+
+import org.spilth.astrosmash.engine.VisibleActor;
 
 public class Player extends VisibleActor {
     private int dx;
